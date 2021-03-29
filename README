@@ -1,0 +1,17 @@
+=bazel cross-compile=
+
+Run
+
+```bash
+bazel build //:hello_cgo
+```
+
+to cross-compile the hello.go binary with a C dependency to libvirt-libs for
+arm64.
+
+Initially copied from
+https://github.com/ltekieli/bazel_cross_compile/tree/master/04_platforms and
+modified to my demo needs.
+
+This uses the gcc compiler provided by arm:
+https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads.
