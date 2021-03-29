@@ -29,35 +29,35 @@ def _impl(ctx):
     tool_paths = [
         tool_path(
             name = "ar",
-            path = "wrappers/aarch64-rpi3-linux-gnu-ar",
+            path = "wrappers/aarch64-none-linux-gnu-ar",
         ),
         tool_path(
             name = "cpp",
-            path = "wrappers/aarch64-rpi3-linux-gnu-cpp",
+            path = "wrappers/aarch64-none-linux-gnu-cpp",
         ),
         tool_path(
             name = "gcc",
-            path = "wrappers/aarch64-rpi3-linux-gnu-gcc",
+            path = "wrappers/aarch64-none-linux-gnu-gcc",
         ),
         tool_path(
             name = "gcov",
-            path = "wrappers/aarch64-rpi3-linux-gnu-gcov",
+            path = "wrappers/aarch64-none-linux-gnu-gcov",
         ),
         tool_path(
             name = "ld",
-            path = "wrappers/aarch64-rpi3-linux-gnu-ld",
+            path = "wrappers/aarch64-none-linux-gnu-ld",
         ),
         tool_path(
             name = "nm",
-            path = "wrappers/aarch64-rpi3-linux-gnu-nm",
+            path = "wrappers/aarch64-none-linux-gnu-nm",
         ),
         tool_path(
             name = "objdump",
-            path = "wrappers/aarch64-rpi3-linux-gnu-objdump",
+            path = "wrappers/aarch64-none-linux-gnu-objdump",
         ),
         tool_path(
             name = "strip",
-            path = "wrappers/aarch64-rpi3-linux-gnu-strip",
+            path = "wrappers/aarch64-none-linux-gnu-strip",
         ),
     ]
 
@@ -70,7 +70,6 @@ def _impl(ctx):
                 flag_groups = [
                     flag_group(
                         flags = [
-                            "--sysroot=external/aarch64-buildroot-linux-gnu-sysroot",
                             "-no-canonical-prefixes",
                             "-fno-canonical-system-headers",
                             "-Wno-builtin-macro-redefined",
@@ -93,7 +92,6 @@ def _impl(ctx):
                 flag_groups = ([
                     flag_group(
                         flags = [
-                            "--sysroot=external/aarch64-buildroot-linux-gnu-sysroot",
                             "-lstdc++",
                         ],
                     ),

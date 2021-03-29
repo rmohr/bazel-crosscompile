@@ -14,8 +14,7 @@ filegroup(
 filegroup(
   name = 'all_files',
   srcs = [
-    '@aarch64-buildroot-linux-gnu-sysroot//:sysroot',
-    '@aarch64-rpi3-linux-gnu//:toolchain',
+    '@aarch64-none-linux-gnu//:toolchain',
     ':wrappers',
   ],
 )
