@@ -1,6 +1,7 @@
 #!/bin/bash
  
 NAME=$(basename "$0")
-TOOLCHAIN_BINDIR=external/aarch64-none-linux-gnu/bin
+#TOOLCHAIN_BINDIR=external/aarch64-none-linux-gnu/bin
+TOOLCHAIN_BINDIR=/home/rmohr/bazel-crosscompile/bazel-bazel-crosscompile/external/aarch64-none-linux-gnu/bin
 
 exec "${TOOLCHAIN_BINDIR}"/"${NAME}" "$@"
