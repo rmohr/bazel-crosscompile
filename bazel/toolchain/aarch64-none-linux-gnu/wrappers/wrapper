@@ -1,7 +1,11 @@
 #!/bin/bash
+
+CUR_DIR="$(
+    cd "$(dirname "$BASH_SOURCE[0]")/"
+    pwd
+)"
  
 NAME=$(basename "$0")
-#TOOLCHAIN_BINDIR=external/aarch64-none-linux-gnu/bin
-TOOLCHAIN_BINDIR=/home/rmohr/bazel-crosscompile/bazel-bazel-crosscompile/external/aarch64-none-linux-gnu/bin
+TOOLCHAIN_BINDIR=${CUR_DIR}/../../../../external/aarch64-none-linux-gnu/bin
 
 exec "${TOOLCHAIN_BINDIR}"/"${NAME}" "$@"
